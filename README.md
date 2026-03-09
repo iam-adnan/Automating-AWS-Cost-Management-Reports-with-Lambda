@@ -53,7 +53,7 @@ Your Lambda function needs permission to read your billing and resource data. At
 }
 ```
 
-3. Set Environment Variables
+### 3. Set Environment Variables
 Go to your Lambda function's Configuration > Environment variables tab and add the following keys securely (do not hardcode these in the script):
 
 SENDER_EMAIL: Your Gmail address (e.g., you@gmail.com)
@@ -62,10 +62,10 @@ APP_PASSWORD: Your 16-character Google App Password (requires 2FA enabled on you
 
 RECIPIENT_EMAIL: The email address where you want to receive the report
 
-4. Deploy the Code
+### 4. Deploy the Code
 Copy the lambda_function.py from this repository and paste it into your Lambda code editor. Click Deploy.
 
-5. Schedule with EventBridge
+### 5. Schedule with EventBridge
 To automate this, add an EventBridge (CloudWatch Events) trigger to your Lambda function.
 
 Create a new rule.
@@ -73,8 +73,8 @@ Create a new rule.
 Set the schedule using a cron expression. Example for the 1st of every month at 12:00 PM UTC:
 cron(0 12 1 * ? *)
 
-📝 Example Output Email: 
-AWS Monthly Cost & Resource Report
+### 📝 Example Output Email: 
+## AWS Monthly Cost & Resource Report
 ==================================
 
 💰 Total AWS Cost (2026-02-01 to 2026-03-01): $14.32
